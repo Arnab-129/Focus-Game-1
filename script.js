@@ -70,10 +70,19 @@ function updateTime() {
 function endTimer(){
     clearInterval(timeInterval);
     countdownEl.innerHTML = `00 : 00`;
+    setTimeout(imageCall, 1000)
 }
 
 function restartTimer(){
     clearInterval(timeInterval)
     startTimer();
+}
+
+function imageCall(){
+    countdownEl.classList.add("d-none")
+    document.getElementById("end").classList.add("d-none")
+    document.getElementById("restart").classList.add("d-none")
+    document.getElementById("reward-message").classList.remove("d-none")
+    document.getElementById('story-image').classList.remove("d-none")
 }
 

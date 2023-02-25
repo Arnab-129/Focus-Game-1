@@ -13,3 +13,20 @@ body{
     gap: 40px;
     justify-content: center;
 }
+
+.grids{
+    z-index: 999;
+}
+
+.col{
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: antiquewhite;
+}
+
+img{
+    height:100%;
+    width:30%;
+    border-radius: 50px;
+}
