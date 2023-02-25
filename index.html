@@ -11,7 +11,7 @@
 </head>
 
 <body class="container d-flex flex-column align-items-center justify-content-center">
-    <main class="d-flex flex-column align-items-center">
+    <main class="d-flex flex-column align-items-center" id="main">
         <h1 class="display-6 text-center mb-4">Select a Timer</h1>
         <select class="form-select-lg text-center ps-2 pe-3 py-2" id= "select-menu" aria-label="Timer Selection Menu">
             <option value="25min">25min</option>
@@ -21,13 +21,13 @@
         <button class="btn btn-primary my-4 px-4" id="continue" onclick="selectTimer()">Continue</button>
     </main>
     <div class="d-none container text-center my-5" id="timer-25">
-        <p class="display-3">25:00</p>
+        <p class="display-3" id="timer-25-val">25 : 00</p>
     </div>
     <div class="d-none container text-center my-5" id="timer-50">
-        <p class="display-3">50:00</p>
+        <p class="display-3" id="timer-50-val">50 : 00</p>
     </div>
     <div class="d-none container text-center my-5" id="timer-90">
-        <p class="display-3">90:00</p>
+        <p class="display-3" id="timer-90-val">90 : 00</p>
     </div>
     <div class="container d-none text-center" id="start" onclick="start()">
         <button class="btn btn-secondary">Start</button>       
