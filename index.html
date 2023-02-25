@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="container d-flex flex-column align-items-center justify-content-center">
+<body class="container d-flex flex-column align-items-center justify-content-center dark" id="body">
+    <img src="images/sun_icon.svg" alt="Light Mode" aria-label="Light Mode" id="mode-light" onclick="modeChange()">
+    <img src="images/moon-icon.svg" alt="Dark Mode" aria-label="Dark Mode" id="mode-dark" class= "d-none" onclick="modeChange()">
     <main class="d-flex flex-column align-items-center" id="main">
         <h1 class="display-6 text-center mb-4">Select a Timer</h1>
         <select class="form-select-lg text-center ps-2 pe-3 py-2" id="select-menu" aria-label="Timer Selection Menu">
@@ -20,6 +22,7 @@
         </select>
         <button class="btn btn-primary my-4 px-4" id="continue" onclick="selectTimer()">Continue</button>
     </main>
+    <p class="lead d-none" id="timer-quote">Timer has started! Start working!</p>
     <div class="d-none container text-center my-5" id="timer-25">
         <p class="display-3" id="timer-25-val">25 : 00</p>
     </div>
@@ -41,47 +44,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js
 "></script>
     <script src="script.js"></script>
-    <div class="grids d-none">
-        <div class="row align-items-start">
-            <div class="col">
-                One of three columns
-            </div>
-            <div class="col">
-                One of three columns
-            </div>
-            <div class="col">
-                One of three columns
-            </div>
-        </div>
-
-        <div class="row align-items-start">
-            <div class="col">
-                One of three columns
-            </div>
-            <div class="col">
-                One of three columns
-            </div>
-            <div class="col">
-                One of three columns
-            </div>
-        </div>
-
-        <div class="row align-items-start">
-            <div class="col">
-                One of three columns
-            </div>
-            <div class="col">
-                One of three columns
-            </div>
-            <div class="col">
-                One of three columns
-            </div>
-        </div>
+    <div class="d-none" id="grids" >
     </div>
     <div class="container d-flex flex-column justify-content-center align-items-center">
         <p class="lead mt-4 py-2 d-none" id="reward-message">Reward Unlocked!</p>
         <img class="story-image my-4 p-4  d-none" id="story-image" src="images/story-image.jpeg" alt="Story Image"
             aria-label="Story Image">
+
     </div>
 </body>
 

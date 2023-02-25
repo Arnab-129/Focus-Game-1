@@ -2,7 +2,8 @@
 let time
 let startMinutes
 let countdownEl
-
+let mode = 0 //0 is dark
+ 
 function selectTimer(){
     var select = document.getElementById("select-menu");
     var value = select.value;
@@ -52,6 +53,7 @@ function startTimer() {
     timeInterval = setInterval(updateTime, 1000);
     document.getElementById("end").classList.remove("d-none")
     document.getElementById("restart").classList.remove("d-none")
+    document.getElementById('timer-quote').classList.remove('d-none');
 }
 
 function updateTime() {
@@ -84,5 +86,22 @@ function imageCall(){
     document.getElementById("restart").classList.add("d-none")
     document.getElementById("reward-message").classList.remove("d-none")
     document.getElementById('story-image').classList.remove("d-none")
+    document.getElementById('grids').classList.remove("d-none")
 }
 
+function modeChange(){
+    if(mode == 0){  //if dark
+        document.getElementById("body").classList.add("light")
+        document.getElementById("body").classList.remove("dark")
+        document.getElementById("mode-light").classList.add("d-none")  //sun icon
+        document.getElementById("mode-dark").classList.remove("d-none")  //moon icon
+        mode = 1;
+    }
+    else{
+        document.getElementById("body").classList.add("dark")
+        document.getElementById("body").classList.remove("light")
+        document.getElementById("mode-light").classList.remove("d-none")  //sun icon
+        document.getElementById("mode-dark").classList.add("d-none")  //moon icon
+        mode = 0
+    }
+}
