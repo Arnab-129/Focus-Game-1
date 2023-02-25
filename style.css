@@ -1,3 +1,4 @@
+
 body {
     min-height: 100vh;
     margin:0;
@@ -64,7 +65,7 @@ li {
     line-height: 20px;
 } */
 
-h2 {
+.h2 {
     letter-spacing: 4px;
 }
 /* 
@@ -134,7 +135,7 @@ a {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-a {
+.a {
     display: flex;
     justify-content: flex-end;
     height: 100vh;
@@ -151,4 +152,91 @@ a {
     color: #0F1017;
     border: 1px solid rgb(255, 69, 0, 0.3);
     box-shadow: 1px 1px 3px 0.1px rgb(255, 69, 0);
+    }
+=======
+body{
+    height:100vh;
+}
+
+.dark{
+    background-color: #18112c;
+    color: white;
+}
+
+.light{
+    background-color: white;
+    color: black;
+}
+
+#start, #continue{
+    border-radius: 50px;
+}
+
+.controls{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+}
+
+.col{
+    background-color: antiquewhite;
+}
+
+#mode-light, #mode-dark{
+    height:50px;
+    width: 50px;
+    margin-left:auto;
+    z-index:9;
+    transition: 30ms ease-in-out;
+}
+
+#mode-light:hover, #mode-dark:hover{
+    translate: 0px -10px;
+}
+
+img{
+    height:100%;
+    width:30%;
+    border-radius: 50px;
+}
+
+.btn-primary{
+    background-color: #f72585;
+    border-color: black;
+}
+
+.btn-primary:hover, .btn-primary:focus{
+    border-color: black;
+    background-color: #7209b7;
+}
+
+.btn-primary:active{
+    background-color: #f72585 !important;
+    border-color: black !important;
+}
+
+
+.btn-secondary{
+    background-color: #3a0ca3 ;
+    border-color: black;
+}
+
+.btn-secondary:hover, .btn-secondary:focus{
+    border-color: black;
+    background-color: #4361ee;
+}
+
+.btn-secondary:active{
+    background-color: #3a0ca3 !important;
+    border-color: black !important;
+}
+
+select{
+    background-color: #a8e9fd;
+}
+
+#grids{
+    z-index: 999;
 }
