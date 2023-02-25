@@ -5,3 +5,11 @@ body{
 #start, #continue{
     border-radius: 50px;
 }
+
+.controls{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+}

@@ -13,7 +13,7 @@
 <body class="container d-flex flex-column align-items-center justify-content-center">
     <main class="d-flex flex-column align-items-center" id="main">
         <h1 class="display-6 text-center mb-4">Select a Timer</h1>
-        <select class="form-select-lg text-center ps-2 pe-3 py-2" id= "select-menu" aria-label="Timer Selection Menu">
+        <select class="form-select-lg text-center ps-2 pe-3 py-2" id="select-menu" aria-label="Timer Selection Menu">
             <option value="25min">25min</option>
             <option value="50min">50min</option>
             <option value="90min">90min</option>
@@ -30,7 +30,13 @@
         <p class="display-3" id="timer-90-val">90 : 00</p>
     </div>
     <div class="container d-none text-center" id="start" onclick="start()">
-        <button class="btn btn-secondary">Start</button>       
+        <button class="btn btn-secondary" aria-label="Start Timer Button">Start</button>
+    </div>
+    <div class="container controls">
+        <button class="d-none btn btn-secondary" aria-label="End Timer button" id="end" onclick="endTimer()">End
+            Timer</button>
+        <button class="d-none btn btn-secondary" aria-label="Restart Timer button" id="restart"
+            onclick="restartTimer()">Restart Timer</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js
 "></script>

@@ -50,6 +50,8 @@ function startTimer() {
     }
     time = startMinutes * 60
     timeInterval = setInterval(updateTime, 1000);
+    document.getElementById("end").classList.remove("d-none")
+    document.getElementById("restart").classList.remove("d-none")
 }
 
 function updateTime() {
@@ -63,4 +65,13 @@ function updateTime() {
     if (time < 0) { //stop the setInterval whe time = 0 for avoid negative time
         clearInterval(timeInterval);
     }
+}
+
+function endTimer(){
+    clearInterval(timeInterval);
+}
+
+function restartTimer(){
+    clearInterval(timeInterval)
+    startTimer();
 }
