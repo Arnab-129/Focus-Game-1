@@ -1,0 +1,7 @@
+body{
+    height:100vh;
+}
+
+#start, #continue{
+    border-radius: 50px;
+}
