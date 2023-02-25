@@ -69,9 +69,11 @@ function updateTime() {
 
 function endTimer(){
     clearInterval(timeInterval);
+    countdownEl.innerHTML = `00 : 00`;
 }
 
 function restartTimer(){
     clearInterval(timeInterval)
     startTimer();
 }
+
